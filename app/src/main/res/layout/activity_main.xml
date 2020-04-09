@@ -29,18 +29,18 @@
         android:background="@android:color/holo_green_light">
 
     </TextView>
+
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/tvCounter"
+        android:layout_centerHorizontal="true"
         android:padding="10dp"
         android:text="20 + 30"
-        android:textSize="40sp"
         android:textColor="@android:color/holo_red_dark"
-     >
-    </TextView>
+        android:textSize="40sp"
+        tools:visibility="invisible"></TextView>
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="wrap_content"
@@ -53,91 +53,97 @@
         android:textColor="@android:color/holo_red_dark"
         >
     </TextView>
+
     <Button
         android:id="@+id/btnGo"
         android:layout_width="242dp"
         android:layout_height="225dp"
+        android:layout_centerInParent="true"
         android:background="#FFFFFF"
         android:backgroundTint="#4CAF50"
         android:onClick="start"
-        android:text="Go"
 
-        android:layout_centerInParent="true"
+        android:text="Go"
         android:textSize="80sp"
-        tools:visibility="invisible" />
+        tools:visibility="visible" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/grpButton"
         android:layout_width="match_parent"
         android:layout_height="455dp"
-        android:layout_margin="10dp"
         android:layout_below="@+id/tvQuestion"
-    >
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        tools:visibility="invisible">
 
         <Button
-            android:layout_margin="10dp"
             android:id="@+id/btnOption1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/holo_purple"
+            android:onClick="tiklandi"
+            android:tag="1"
             android:text="1"
             android:textSize="80sp"
             app:layout_column="0"
-            app:layout_row="0"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_gravity="fill"
-            android:tag="1"
-            android:background="@android:color/holo_purple"
+            app:layout_row="0"
 
-            />
+            app:layout_rowWeight="1" />
 
         <Button
-            android:layout_margin="10dp"
             android:id="@+id/btnOption2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="tiklandi"
+            android:tag="2"
             android:text="2"
             android:textSize="80sp"
             app:layout_column="0"
-            app:layout_row="1"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_gravity="fill"
-            android:tag="2"
-            android:background="@android:color/holo_orange_light"
+            app:layout_row="1"
 
-            />
+            app:layout_rowWeight="1" />
+
         <Button
-            android:layout_margin="10dp"
             android:id="@+id/btnOption3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/holo_green_dark"
+            android:onClick="tiklandi"
+            android:tag="3"
             android:text="3"
             android:textSize="80sp"
             app:layout_column="1"
-            app:layout_row="0"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_gravity="fill"
-            android:tag="3"
-            android:background="@android:color/holo_green_dark"
+            app:layout_row="0"
 
-            />
+            app:layout_rowWeight="1" />
+
         <Button
-            android:layout_margin="10dp"
             android:id="@+id/btnOption4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/holo_blue_bright"
+            android:onClick="tiklandi"
+            android:tag="4"
             android:text="4"
             android:textSize="80sp"
             app:layout_column="1"
-            app:layout_row="1"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
             app:layout_gravity="fill"
-            android:tag="4"
-            android:background="@android:color/holo_blue_bright"
+            app:layout_row="1"
 
-            />
+            app:layout_rowWeight="1" />
     </androidx.gridlayout.widget.GridLayout>
 </RelativeLayout>
